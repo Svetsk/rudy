@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: 'Museo Sans Cyrl 100';
+    src: url(/assets/styles/font/MuseoSansCyrl-100.ttf);
+}
+@font-face {
+    font-family: 'Museo Sans Cyrl 500';
+    src: url(/assets/styles/font/MuseoSansCyrl-500.ttf);
+}
+
+html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    & body{
+        margin: 0 auto;
+        padding: 0;
+        max-width: 1460px;
+        font-family: 'Museo Sans Cyrl 500';
+    }
+}
+
+.default{
+    margin: 0 auto;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+p{
+    margin: 0;
+}
+
+.main{
+    margin: 0 10px;
+}
