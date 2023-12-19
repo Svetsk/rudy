@@ -7,6 +7,7 @@ const { profileList } = storeToRefs(useProfileStore());
 
 <template>
   <div class="users" v-if="profileList">
+    <h1>Account Details</h1>
     <ul v-for="user in profileList" :key="user.id">
       <li>
         <p>User ID:</p>

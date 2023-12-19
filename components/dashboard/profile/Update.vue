@@ -14,7 +14,13 @@ const state = reactive({
   email: currentPost.value?.email ?? "",
   password: currentPost.value?.password ?? "",
 });
-
+const isEnableComputed = computed(() => {
+  if (state.name && state.email && state.password) {
+    return true;
+  } else {
+    return false;
+  }
+});
 const resetForm = () => {
   state.id = "";
   state.name = "";
@@ -23,13 +29,15 @@ const resetForm = () => {
 };
 
 const submitForm = async () => {
-  if (currentPost.value?.id) {
+  if (isEnableComputed.value && currentPost.value?.id) {
     const result = await updateProfile(state);
 
     if (result === "Success") {
       resetForm();
       return await navigateTo("/guard/profile");
     }
+  } else {
+    console.log("Empry Fields");
   }
 };
 </script>

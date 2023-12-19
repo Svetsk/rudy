@@ -1,11 +1,13 @@
 <script setup>
-defineProps({
+const props = defineProps({
   title: {
     type: String,
     default: "Расчитать стоимость",
   },
   btnSlot: Boolean,
 });
+
+const { disableButton } = toRefs(props);
 </script>
 
 <template>

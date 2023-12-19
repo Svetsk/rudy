@@ -12,16 +12,23 @@ defineProps<{ post: Post }>();
       <NuxtLink :to="`/post/${post.id}`">{{ post.title }} </NuxtLink>
     </p>
 
-    <p>{{ post.subDescription }}</p>
+    <p class="sub">{{ post.subDescription }}</p>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .stats {
   width: min(100%, 466px);
+  height: 550px;
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 20px;
+  & img {
+    height: min(100%, 319px);
+  }
+  & .sub {
+    font-size: 17px;
+  }
 }
 .title__stats {
   color: #000;

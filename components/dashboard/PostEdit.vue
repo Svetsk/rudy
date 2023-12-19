@@ -17,6 +17,13 @@ const state = reactive({
   description: currentPost.value?.description ?? "",
 });
 
+const isEnableComputed = computed(() => {
+  if (state.title && state.subDescription && state.description) {
+    return true;
+  } else {
+    return false;
+  }
+});
 const onFileSelected = async (event: Event) => {
   const [_file] = (event.target as HTMLInputElement)?.files as FileList;
 
@@ -54,7 +61,7 @@ const uploadFile = async () => {
 };
 
 const submitForm = async () => {
-  if (currentPost.value?.id) {
+  if (isEnableComputed.value && currentPost.value?.id) {
     const resultName = await uploadFile();
     if (resultName !== "Error" || resultName !== "Emty File") {
       state.imagePreview = resultName;
@@ -66,6 +73,8 @@ const submitForm = async () => {
         return await navigateTo("/guard");
       }
     }
+  } else {
+    console.log("Empty Fields");
   }
 };
 </script>

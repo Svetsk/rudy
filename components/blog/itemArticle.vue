@@ -22,6 +22,6 @@ useSeoMeta({
   display: flex;
   flex-wrap: wrap;
   column-gap: 21px;
-  row-gap: 40px;
+  row-gap: 50px;
 }
 </style>

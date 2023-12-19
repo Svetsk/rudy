@@ -22,6 +22,14 @@ const resetForm = () => {
   fileL.value = null;
 };
 
+const isEnableComputed = computed(() => {
+  if (state.title && state.subDescription && state.description && fileL.value) {
+    return true;
+  } else {
+    return false;
+  }
+});
+
 const onFileSelected = async (event: Event) => {
   const [_file] = (event.target as HTMLInputElement)?.files as FileList;
 
@@ -30,7 +38,7 @@ const onFileSelected = async (event: Event) => {
 
 const uploadFile = async () => {
   if (!fileL.value) {
-    return;
+    return "Emty File";
   }
 
   try {
@@ -49,16 +57,20 @@ const uploadFile = async () => {
   }
 };
 const submitForm = async () => {
-  const resultName = await uploadFile();
+  if (isEnableComputed.value) {
+    const resultName = await uploadFile();
 
-  if (resultName !== "Error" || resultName !== "Emty File") {
-    state.imagePreview = resultName;
-    const result = await addPost(state);
+    if (resultName !== "Error" || resultName !== "Emty File") {
+      state.imagePreview = resultName;
+      const result = await addPost(state);
 
-    if (result === "Success") {
-      resetForm();
-      return await navigateTo("/guard");
+      if (result === "Success") {
+        resetForm();
+        return await navigateTo("/guard");
+      }
     }
+  } else {
+    console.log("Empty Fields");
   }
 };
 </script>

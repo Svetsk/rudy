@@ -34,4 +34,13 @@ if (!isRouteCorrect()) {
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.article__container {
+  display: flex;
+  justify-content: center;
+  & .item {
+    width: min(100%, 1200px);
+    display: grid;
+  }
+}
+</style>
