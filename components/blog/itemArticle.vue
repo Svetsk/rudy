@@ -1,22 +1,27 @@
-<template>
-    <div class="item">
-      <UiElementsItemsArticle title="qqqqqq" imgSrc="/image/asai.png" subtitle="qwedwefssss"/>
-      <UiElementsItemsArticle title="qqqqqq" imgSrc="/image/asai.png" subtitle="qwedwefssss"/>
-      <UiElementsItemsArticle title="qqqqqq" imgSrc="/image/asai.png" subtitle="qwedwefssss"/>
-      <UiElementsItemsArticle title="qqqqqq" imgSrc="/image/asai.png" subtitle="qwedwefssss"/>
-    </div>
-</template>
+<script setup lang="ts">
+import { useArticleStore } from "@/stores/postStore";
+import { storeToRefs } from "pinia";
 
-<script setup>
+const { postList } = storeToRefs(useArticleStore());
 
+useSeoMeta({
+  title: "Posts",
+  ogTitle: "Posts",
+});
 </script>
 
+<template>
+  <div class="item" v-if="postList">
+    <UiElementsItemsArticle v-for="(post, index) in postList" :key="index" :post="post" />
+  </div>
+</template>
+
 <style lang="scss" scoped>
-    .item{
-        padding-top: 100px;
-      display: flex;
-      flex-wrap: wrap;
-      column-gap: 21px;
-      row-gap: 40px;
-    }
+.item {
+  padding-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 21px;
+  row-gap: 40px;
+}
 </style>

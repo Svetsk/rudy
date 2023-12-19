@@ -1,23 +1,23 @@
-<template>
-    <div>
-        <button class="transition__button" @click="show = !show">
-          <p>{{ buttonTitle }}</p>
-          <UiElementsIcons icon-name="ic:outline-plus" :class-icon="{'plusIcon':show}" />
-        </button>
-        <Transition>
-            <p class="transition__text" v-if="show">{{ transitionText }}</p>
-        </Transition>
-    </div>
-</template>
-
 <script setup>
-const show = ref(false)
-
 defineProps({
-        buttonTitle: String,
-        transitionText: String,
+  buttonTitle: String,
+  transitionText: String,
 });
+
+const show = ref(false);
 </script>
+
+<template>
+  <div>
+    <button class="transition__button" @click="show = !show">
+      <p>{{ buttonTitle }}</p>
+      <UiElementsIcons icon-name="ic:outline-plus" :class-icon="{ plusIcon: show }" />
+    </button>
+    <Transition>
+      <p class="transition__text" v-if="show">{{ transitionText }}</p>
+    </Transition>
+  </div>
+</template>
 
 <style lang="scss" scoped>
 .v-enter-active,
@@ -29,7 +29,7 @@ defineProps({
 .v-leave-to {
   opacity: 0;
 }
-.transition__button{
+.transition__button {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,32 +38,32 @@ defineProps({
   width: 100%;
   padding: 0;
   text-align: start;
-  & p{
+  & p {
     color: #000;
-    font-family: 'Museo Sans Cyrl';
+    font-family: "Museo Sans Cyrl";
     font-size: 36px;
     font-weight: 400;
     line-height: 109.8%; /* 39.528px */
     padding: 20px 0;
   }
 }
-.transition__text{
+.transition__text {
   color: #484848;
-  font-family: 'Mulish';
+  font-family: "Mulish";
   font-size: 24px;
   font-weight: 400;
   max-width: 1138px;
   padding-bottom: 20px;
 }
-.plusIcon{
-    background: #1536DF;
-    border-radius: 100%;
+.plusIcon {
+  background: #1536df;
+  border-radius: 100%;
 }
 @media screen and (max-width: 660px) {
-  .transition__button p{
+  .transition__button p {
     font-size: 24px;
   }
-  .transition__text{
+  .transition__text {
     font-size: 18px;
   }
 }

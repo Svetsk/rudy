@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
+
 defineProps({
   iconName: {
     type: String,
@@ -36,6 +37,7 @@ defineProps({
   },
 });
 </script>
+
 <template>
   <Icon
     :title="iconName"
@@ -44,13 +46,13 @@ defineProps({
     :width="sizeWidth"
     :height="sizeHeigth"
     :horizontal-flip="turnX"
-    :vertical-flip="turnY" 
+    :vertical-flip="turnY"
     :class="classIcon"
-    class="icon"
-    />
+    class="icon" />
 </template>
+
 <style lang="scss" scoped>
-.arrow{
+.arrow {
   transform: rotate(45deg);
 }
 </style>
