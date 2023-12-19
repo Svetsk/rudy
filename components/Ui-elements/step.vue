@@ -11,7 +11,9 @@ const show = ref(false);
   <div>
     <button class="transition__button" @click="show = !show">
       <p>{{ buttonTitle }}</p>
-      <UiElementsIcons icon-name="ic:outline-plus" :class-icon="{ plusIcon: show }" />
+      <UiElementsIcons
+        icon-name="simple-line-icons:plus"
+        :color-icon="show ? '#1536df' : 'black'" />
     </button>
     <Transition>
       <p class="transition__text" v-if="show">{{ transitionText }}</p>

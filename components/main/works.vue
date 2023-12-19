@@ -6,7 +6,7 @@
         <div class="fewho">
           <a href="https://%D0%A4%D0%B5%D1%85%D1%83.%D0%B1%D0%B5%D0%BB">
             <div class="fewho__img">
-              <NuxtImg src="image/fewho.png" />
+              <NuxtImg src="/image/fewho.png" />
             </div>
           </a>
           <p class="port__title">ООО “ФЕЙХУ”</p>
@@ -15,7 +15,7 @@
         <div class="facture">
           <a href="https://factureproject.ru">
             <div class="facture__img">
-              <NuxtImg src="image/facture.png" />
+              <NuxtImg src="/image/facture.png" />
             </div>
           </a>
           <p class="port__title">Facture Project</p>
@@ -26,7 +26,7 @@
         <div class="asai">
           <a href="https://Asaivapeshop.by">
             <div class="asai__img">
-              <NuxtImg src="image/asai.png" />
+              <NuxtImg src="/image/asai.png" />
             </div>
           </a>
           <p class="port__title">AsaiVapeShop</p>
@@ -35,7 +35,7 @@
         <div class="soen">
           <a href="https://Soen.su">
             <div class="soen__img">
-              <NuxtImg src="image/soen.png" />
+              <NuxtImg src="/image/soen.png" />
             </div>
           </a>
           <p class="port__title">SOEN</p>
@@ -44,7 +44,7 @@
         <div class="lafo">
           <a href="https://Laforme.su">
             <div class="lafo__img">
-              <NuxtImg src="image/lafo.png" />
+              <NuxtImg src="/image/lafo.png" />
             </div>
           </a>
           <p class="port__title">Laforme</p>
