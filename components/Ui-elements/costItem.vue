@@ -38,7 +38,7 @@ defineProps({
           от <span>{{ cost }}</span>
         </p>
       </div>
-      <UiElementsButton title="Расчитать стоимость" />
+      <UiElementsButton title="Расчитать стоимость" link="#count" :is-button="false" />
     </div>
   </div>
 </template>

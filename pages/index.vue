@@ -13,7 +13,11 @@ useSeoMeta({
       <MainCountForm />
     </MainModalPop>
     <MainModalPop v-if="popap.timerTrigger">
-      <h3>Pop Time</h3>
+      <div class="success">
+        <h3>Заявка отправлена</h3>
+
+        <button class="calc" @click="() => (popap.timerTrigger = !popap.timerTrigger)">Ok</button>
+      </div>
     </MainModalPop>
     <MainOffer />
 
@@ -25,6 +29,20 @@ useSeoMeta({
     <MainRequ />
     <MainCostSeo />
     <MainDescription />
-    <MainModal />
+    <MainModal id="count" />
   </div>
 </template>
+
+<style lang="scss" scoped>
+.success {
+  background: #fff;
+  padding: 50px;
+  display: grid;
+  row-gap: 20px;
+
+  & button {
+    display: grid;
+    place-content: center;
+  }
+}
+</style>

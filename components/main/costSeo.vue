@@ -15,7 +15,7 @@ const { priceList } = storeToRefs(usePriceStore());
         meta-one="Создание сематического ядра"
         meta-two="Внутренняя оптимизация сайта"
         meta-three="Внешняя оптимизация сайта"
-        :cost="`${priceList.find((el) => el.title.includes('SEO оптимизация'))?.Price}$`" />/>
+        :cost="`${priceList.find((el) => el.title.includes('SEO оптимизация'))?.Price}$`" />
       <UiElementsCostItem
         title="Контекстное"
         description="Контекстное продвижение позволит запустить продажи и получить первые заявки спустя 3 дня"

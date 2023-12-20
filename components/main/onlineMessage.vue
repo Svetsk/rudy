@@ -1,6 +1,6 @@
 <template>
   <div class="message">
-    <button>Написать нам</button>
+    <NuxtLink class="link" to="#footer"> Написать нам </NuxtLink>
   </div>
 </template>
 
@@ -13,7 +13,7 @@
   bottom: 1%;
   z-index: 100;
 
-  & button {
+  & .link {
     border-radius: 5px;
     background: #1536df;
     box-shadow: 0px 2px 3.5px 0px rgba(21, 54, 223, 0.14);

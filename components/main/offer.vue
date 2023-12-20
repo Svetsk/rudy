@@ -31,10 +31,10 @@ const popap = usePopap();
           <span>Расчитать стоимость</span>
           <span>></span>
         </button>
-        <button class="call__me">
+        <NuxtLink class="call__me" to="#footer">
           <span>Связаться с нами</span>
           <span>></span>
-        </button>
+        </NuxtLink>
       </div>
     </div>
     <div class="offer__image">

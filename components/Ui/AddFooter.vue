@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div class="footer" id="footer">
     <div>
       <a href="">Сайты под ключ</a>
       <a href="">Продвижение</a>
