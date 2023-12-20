@@ -5,7 +5,7 @@ const { priceList } = storeToRefs(usePriceStore());
 </script>
 
 <template>
-  <div class="cost__seo" v-if="priceList">
+  <div class="cost__seo" v-if="priceList" id="seo">
     <UiElementsTitle title="Стоимость продвижения" />
 
     <div class="costSeo__flex">

@@ -9,7 +9,18 @@ const state = reactive({
   budget: "",
 });
 
+const isEnableComputed = computed(() => {
+  if (state.name && state.phone && state.comment && state.budget) {
+    return true;
+  } else {
+    return false;
+  }
+});
+
+
+
 const sendForm = async () => {
+  if(isEnableComputed.value){
   const text = `
         <b>Имя: </b><i> ${state.name} </i>\n
         <b>Телефон: </b> <i> ${state.phone}</i> \n
@@ -17,7 +28,6 @@ const sendForm = async () => {
         <b>Бюджет: </b> <i> ${state.budget}</i> \n
         <b>Коментарий: </b> <i> ${state.comment}</i> \n
     `;
-
   try {
     const result = await $fetch("/api/bot/send", {
       method: "POST",
@@ -35,7 +45,15 @@ const sendForm = async () => {
     // popap.value.buttonTrigger = false   закрываем
     popap.value.buttonTrigger = !popap.value.buttonTrigger;
   }
+  console.log('send forme')
+  
+}
+else{
+  console.log('error')
+}
 };
+
+
 </script>
 
 <template>
@@ -50,11 +68,11 @@ const sendForm = async () => {
       <form class="count__price-inputs" @submit.prevent="sendForm">
         <div class="input__group">
           <label for="name">Имя / Название компании</label>
-          <input v-model="state.name" id="name" name="name" type="text" />
+          <input v-model="state.name" id="name" name="name" type="text" class="inpt"/>
         </div>
         <div class="input__group">
           <label for="phone">Номер телефона</label>
-          <input v-model="state.phone" id="phone" name="phone" type="text" />
+          <input v-model="state.phone" id="phone" name="phone" type="number" class="inpt"/>
         </div>
         <div class="input__group">
           <label>Ваш бюджет</label>
@@ -117,7 +135,7 @@ const sendForm = async () => {
         <div class="input__group">
           <label for="comment">Комментарий</label>
 
-          <textarea v-model="state.comment" id="comment" name="comment"></textarea>
+          <textarea v-model="state.comment" id="comment" name="comment" class="inpt"></textarea>
         </div>
         <button class="calc" type="submit">
           <span>Расчитать стоимость</span>
@@ -130,16 +148,16 @@ const sendForm = async () => {
 
 <style scoped lang="scss">
 .wrapper {
-  width: min(100%, 1028px);
-  height: min(100%, 964px);
   display: grid;
   place-content: center;
   background: #fff;
+  overflow-y: scroll;
 }
 .count__price {
   /*  width: min(100%, 868px); */
   /*   display: grid;
   grid-template-columns: 1fr; */
+  padding: 50px 80px;
   &-top {
     display: flex;
     align-items: flex-start;
@@ -216,7 +234,47 @@ const sendForm = async () => {
     }
   }
 }
+@media screen and (max-width: 1100px) {
+  .inpt {
+        width: min(100%, 460px) !important;
+        font-size: 18px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
 
+}
+@media screen and (max-width: 762px) {
+  .inpt {
+        width: min(100%, 320px) !important;
+        font-size: 18px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      h2{
+    font-size: 32px !important;
+  }
+}
+@media screen and (max-width: 700px) {
+      label{
+        font-size: 14px !important;
+      }
+      .btn_budget{
+        font-size: 10px !important;
+      }
+}
+@media screen and (max-width: 560px) {
+  .btn_budget{
+    padding: 0 32px !important;
+  }  
+}
+@media screen and (max-width: 450px) {
+      label{
+        font-size: 12px !important;
+      }
+      .btn_budget{
+        padding: 0 16px !important;
+      } 
+}
 .btn {
   color: #1536df;
   background: transparent;
@@ -258,5 +316,8 @@ const sendForm = async () => {
     color: #fff;
     background: #1536df;
   }
+}
+button{
+  cursor: pointer;
 }
 </style>

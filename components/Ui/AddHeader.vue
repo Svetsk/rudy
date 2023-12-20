@@ -1,5 +1,6 @@
 <script setup>
 const show = ref(false);
+const popap = usePopap();
 </script>
 
 <template>
@@ -11,19 +12,19 @@ const show = ref(false);
     <nav class="desktop__menu">
       <ul class="desktop__menu__ul">
         <li>
-          <a class="link">Сайты под ключ</a>
+          <a href="#offer" class="link">Сайты под ключ</a>
         </li>
         <li>
-          <a class="link">Продвижение</a>
+          <a href="#seo" class="link">Продвижение</a>
         </li>
         <li>
-          <a class="link">Портфолио</a>
+          <a href="#works" class="link">Портфолио</a>
         </li>
         <li>
           <NuxtLink class="link" to="/blog">Блог</NuxtLink>
         </li>
         <li>
-          <a class="link">Этапы и оплата</a>
+          <a href="#step" class="link">Этапы и оплата</a>
         </li>
       </ul>
     </nav>
@@ -57,7 +58,7 @@ const show = ref(false);
         </ul>
       </Transition>
     </nav>
-    <a href="" class="menu__button">
+    <a class="menu__button" @click="() => (popap.buttonTrigger = !popap.buttonTrigger)">
       <span>Посчитать стоимость</span>
       <UiElementsIcons
         icon-name="ph:arrow-up-light"
@@ -104,6 +105,7 @@ header {
   color: #1536df;
   column-gap: 12px;
   order: 3;
+  cursor: pointer;
 
   & span {
     color: #1536df;

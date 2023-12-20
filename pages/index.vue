@@ -19,16 +19,16 @@ useSeoMeta({
         <button class="calc" @click="() => (popap.timerTrigger = !popap.timerTrigger)">Ok</button>
       </div>
     </MainModalPop>
-    <MainOffer />
 
+    <MainOffer id="offer" />
     <MainOnlineMessage />
-    <MainCostDev />
-    <MainSocial />
-    <MainStep />
-    <MainWorks />
-    <MainRequ />
-    <MainCostSeo />
-    <MainDescription />
+    <MainCostDev id="cost" />
+    <MainSocial id="social" />
+    <MainStep id="step" />
+    <MainWorks id="works" />
+    <MainRequ id="requ" />
+    <MainCostSeo id="seo" />
+    <MainDescription id="desc" />
     <MainModal id="count" />
   </div>
 </template>
