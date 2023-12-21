@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const popap = usePopap();
 
 useSeoMeta({
   title: "Rudy Studio",
@@ -9,16 +8,6 @@ useSeoMeta({
 
 <template>
   <div class="main">
-    <MainModalPop v-if="popap.buttonTrigger">
-      <MainCountForm />
-    </MainModalPop>
-    <MainModalPop v-if="popap.timerTrigger">
-      <div class="success">
-        <h3>Заявка отправлена</h3>
-
-        <button class="calc" @click="() => (popap.timerTrigger = !popap.timerTrigger)">Ok</button>
-      </div>
-    </MainModalPop>
 
     <MainOffer id="offer" />
     <MainOnlineMessage />
