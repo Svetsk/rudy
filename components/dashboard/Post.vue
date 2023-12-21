@@ -35,7 +35,7 @@ const goNext = async (routeName: string, id: string | undefined) => {
 
     <img v-else src="/image/asai.png" :alt="article.title" />
     <div class="description">
-      <h4 class="title" @click="goNext('post', article.id)">{{ article.title }}</h4>
+      <h4 class="title">{{ article.title }}</h4>
       <p class="created">{{ article.create_at && formatDate(article.create_at) }}</p>
       <p class="post_body">
         {{ article.subDescription }}

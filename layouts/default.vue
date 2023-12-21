@@ -21,11 +21,22 @@ const loadStores = async () => {
 //Load all stores
 
 await loadStores();
+const popap = usePopap();
 </script>
 
 <template>
   <div class="default">
     <UiAddHeader />
+    <MainModalPop v-if="popap.buttonTrigger">
+      <MainCountForm />
+    </MainModalPop>
+    <MainModalPop v-if="popap.timerTrigger">
+      <div class="success">
+        <h3>Заявка отправлена</h3>
+
+        <button class="calc" @click="() => (popap.timerTrigger = !popap.timerTrigger)">Ok</button>
+      </div>
+    </MainModalPop>
     <main>
       <slot />
     </main>
