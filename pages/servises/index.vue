@@ -1,11 +1,5 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-  $END$
+  <div>
+    <ServisesServise />
+  </div>
 </template>
-
-<style scoped lang="scss">
-
-</style>

@@ -1,148 +1,127 @@
 <template>
     <header>
-        <NuxtLink class="logo" to="/">
-            <p class="rudy">Rudy</p>
-            <p class="studio">Rudy Studio</p>
-        </NuxtLink>
-        <nav class="desktop__menu">
-            <ul class="desktop__menu__ul">
-                <li>
-                    <a class="link">Сайты под ключ</a>
-                </li>
-                <li>
-                    <a class="link">Продвижение</a>
-                </li>
-                <li>
-                    <a class="link">Портфолио</a>
-                </li>
-                <li>
-                    <NuxtLink class="link" to="blog">Блог</NuxtLink>
-                </li>
-                <li>
-                    <a class="link">Этапы и оплата</a>
-                </li>
-            </ul>
-        </nav>
-        <nav class="mobile__menu">
-            <Transition name="fade" mode="out-in">
-                <UiElementsIcons icon-name="ci:menu-alt-01" class-icon="burger" color-icon="#1536DF" size-width="24px" @click="show = !show" key="menu" />
-                <!-- <UiElementsIcons icon-name="ic:outline-close" class-icon="close__burger" color-icon="#1536DF" size-width="24px" v-else @click="show = !show" key="clear" /> -->
-            </Transition>
-            <Transition name="fade">
-                <ul v-if="show" class="mobile__menu__ul">
-                    <li>
-                        <a class="link">Сайты под ключ</a>
-                    </li>
-                    <li>
-                        <a class="link">Продвижение</a>
-                    </li>
-                    <li>
-                        <a class="link">Портфолио</a>
-                    </li>
-                    <li>
-                        <NuxtLink class="link" to="/">Блог</NuxtLink>
-                    </li>
-                    <li>
-                        <a class="link">Этапы и оплата</a>
-                    </li>
+      <div class="header__up">
+        <div class="logo">
+          <nuxt-link to="/" class="logo__img">WizSol</nuxt-link>
+          <p>Наше видение вашего успеха!</p>
+        </div>
+        <div class="header__button__ui">
+          <div>
+            <nuxt-link to="/" class="header__button header__button__one">Заказать сайт</nuxt-link>
+          </div>
+          <div>
+            <nuxt-link to="/" class="header__button header__button__two">Заказать продвижение</nuxt-link>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <nav>
+          <ul>
+            <li><nuxt-link to="">Как мы работаем</nuxt-link></li>
+            <li class="submenu">
+              <nuxt-link to="/servises">
+                Услуги 👇
+              </nuxt-link>
+                <ul class="services">
+                  <li class="ul__li__point"><nuxt-link to="/servises/development">Разработка</nuxt-link></li>
+                  <li class="ul__li__point"><nuxt-link to="/servises/marketing">Продвижение</nuxt-link></li>
+                  <li class="ul__li__point"><nuxt-link to="/servises/design">Дизайн</nuxt-link></li>
                 </ul>
-            </Transition>
+            </li>
+            <li><nuxt-link to="/">Тарифы</nuxt-link></li>
+            <li><nuxt-link to="/">Помощь</nuxt-link></li>
+          </ul>
         </nav>
-        <a href="" class="menu__button">
-            <span>Посчитать стоимость</span>
-            <UiElementsIcons icon-name="ph:arrow-up-light" class-icon="arrow" color-icon="#1536DF" size-width="24px"></UiElementsIcons>
-        </a>
+      </div>
     </header>
 </template>
-
 <script setup>
 const show = ref(false)
 </script>
-
 <style lang="scss" scoped>
 header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 10px;
-
-    & nav{ 
-    order: 2;
-    & .desktop__menu__ul{
-        display: flex;
-        column-gap: 30px;
-
-        & li{
-            color: #000;
-            font-size: 16px;
-            font-weight: 300;
-            line-height: 26px; /* 162.5% */
-        }
-    }
+  display: flex;
 }
-
+.logo__img{
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 800;
 }
-.logo .studio{
-    color: #000;
-    font-size: 25px;
-    font-weight: 100;
-    line-height: 26px; /* 104% */
-    font-family: 'Museo Sans Cyrl 100';
-    order: 1;
+.logo{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  column-gap: 8px;
 }
-.menu__button{
-    display: flex;
-    align-items: flex-end;
-    color: #1536DF;
-    column-gap: 12px;
-    order: 3;
-
-    & span{
-        color: #1536DF;
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 26px; /* 162.5% */
-    }
+.header__button__ui{
+  display: flex;
+  column-gap: 21px;
 }
-.arrow{
-    padding: 0;
-    margin: 0;
+.header__button{
+  width: 200px;
+  border-radius: 50px;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.mobile__menu{
-    display: none;
+.header__button__one{
+  border: 2px solid #7F5AF0;
 }
-
-.rudy{
-    display: none;
+.header__button__two{
+  border: 2px solid #2CB67D;
 }
-
-@media screen  and (max-width: 999px){
-    .logo .studio{
-        font-size: 20px;
+.submenu ul{
+  display: flex;
+  flex-direction: column;
+  padding: 0 !important;
+  padding: 14px 24px !important;
+  position: absolute;
+  background: #1e1e1e;
+  border-radius: 12px;
+  border: 0.1rem solid #fff;
+  transform: translateX(-10px);
+  cursor: default;
+  & li{
+    padding: 4px 0;
+    font-size: 17px;
+    font-weight: 700;
+    & a:hover{
+      color: #2CB67D;
+      cursor: pointer;
     }
-    .menu__button span{
-        font-size: 13px;
-    }
-    .link{
-        font-size: 13px;
-    }
+  }
 }
-@media screen  and (max-width: 891px){
-    .logo .studio{
-        display: none;
-    }
-    .rudy{
-        display: block;
-    }
+li {
+  cursor: pointer;
 }
-@media screen  and (max-width: 768px){
-    .desktop__menu{
-        display: none;
+li.submenu ul {
+  display: none;
+  margin: 0;
+}
+li.submenu:hover ul {
+  display: block;
+}
+.header__up{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+header{
+  display: flex;
+  flex-direction: column;
+}
+.menu{
+  border: 0.1rem solid #fff;
+  border-radius: 50px;
+  padding: 0 24px;
+  & nav{
+    &> ul{
+      display: flex;
+      justify-content: space-between;
+      margin: 12px;
     }
-    .mobile__menu{
-        display: block;
-        order: 4;
-    }
+  }
 }
 </style>
