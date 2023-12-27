@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 useSeoMeta({
   title: "Rudy Studio",
   ogTitle: "Rudy Studio",
@@ -10,7 +9,6 @@ useSeoMeta({
   <div class="main">
 
     <MainOffer id="offer" />
-    <MainOnlineMessage />
     <MainCostDev id="cost" />
     <MainSocial id="social" />
     <MainStep id="step" />

@@ -59,7 +59,7 @@ const popap = usePopap();
       </Transition>
     </nav>
     <a class="menu__button" @click="() => (popap.buttonTrigger = !popap.buttonTrigger)">
-      <span>Посчитать стоимость</span>
+      <span>Рассчитать стоимость</span>
       <UiElementsIcons
         icon-name="ph:arrow-up-light"
         class-icon="arrow"

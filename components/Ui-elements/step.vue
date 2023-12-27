@@ -12,8 +12,10 @@ const show = ref(false);
     <button class="transition__button" @click="show = !show">
       <p>{{ buttonTitle }}</p>
       <UiElementsIcons
-        icon-name="simple-line-icons:plus"
-        :color-icon="show ? '#1536df' : 'black'" />
+        :icon-name="show ? 'ph:plus-circle-fill' : 'iconamoon:sign-plus-fill'"
+        :color-icon="show ? '#1536df' : 'black'"
+        :size-width="show ? '40px' : '32px'"
+        :size-heigth="show ? '40px' : '32px'" />
     </button>
     <Transition>
       <p class="transition__text" v-if="show">{{ transitionText }}</p>
@@ -42,7 +44,7 @@ const show = ref(false);
   text-align: start;
   & p {
     color: #000;
-    font-family: "Museo Sans Cyrl";
+    font-family: "Museo Sans Cyrl 500";
     font-size: 36px;
     font-weight: 400;
     line-height: 109.8%; /* 39.528px */
@@ -51,7 +53,7 @@ const show = ref(false);
 }
 .transition__text {
   color: #484848;
-  font-family: "Mulish";
+  font-family: "Inter";
   font-size: 24px;
   font-weight: 400;
   max-width: 1138px;

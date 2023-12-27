@@ -1,10 +1,47 @@
 <script setup lang="ts">
 const popap = usePopap();
+
+const state = reactive({
+  name: "",
+  phone: "",
+  comment: "",
+});
+
+const isEnableComputed = computed(() => {
+  if (state.name && state.phone && state.comment) {
+    return true;
+  } else {
+    return false;
+  }
+});
+
+const sendForm = async () => {
+  if (isEnableComputed.value) {
+    const text = `
+        <b>Имя/Название проекта: </b><i> ${state.name} </i>\n
+        <b>Телефон: </b> <i> ${state.phone}</i> \n
+        <b>Коментарий: </b> <i> ${state.comment}</i> \n
+    `;
+    try {
+      const result = await $fetch("/api/bot/send", {
+        method: "POST",
+        body: JSON.stringify(text),
+      });
+
+      popap.value.timerTrigger = !popap.value.timerTrigger;
+    } catch (error) {
+      console.log(error);
+    }
+    console.log("send forme");
+  } else {
+    console.log("error");
+  }
+};
 </script>
 
 <template>
   <div>
-    <div class="forms">
+    <div class="forms" id="modal">
       <div class="left">
         <div>
           <h3>Расчет<br />стоимости</h3>
@@ -37,16 +74,18 @@ const popap = usePopap();
         </div>
       </div>
       <div class="right">
-        <form>
+        <form @submit.prevent="sendForm">
           <div>
-            <input type="text" name="" id="" placeholder="Имя/Название проекта" />
-            <input type="text" name="" id="" placeholder="Мы свяжемся с вами в течении 20 минут" />
-            <input type="text" name="" id="" placeholder="Номер телефона" />
-            <input type="text" name="" id="" />
+            <input
+              v-model="state.name"
+              type="text"
+              name="name"
+              placeholder="Имя/Название проекта" />
+            <input disabled type="text" placeholder="Мы свяжемся с вами в течении 20 минут" />
+            <input v-model="state.phone" type="text" name="phone" placeholder="Номер телефона" />
+            <textarea v-model="state.comment" name="comment" class="textaria"></textarea>
           </div>
-          <button type="button" @click="popap.buttonTrigger = !popap.buttonTrigger">
-            Расчитать стоимость
-          </button>
+          <button type="submit">Расчитать стоимость</button>
         </form>
         <div class="social__form zzz">
           <p>Или напишите нам в соц.сети</p>
@@ -80,6 +119,15 @@ const popap = usePopap();
 </template>
 
 <style lang="scss" scoped>
+.forms{
+  align-items: center !important;
+  justify-content: center !important;
+}
+.textaria{
+  height: 200px;
+  margin-bottom: 40px;
+  background: transparent;
+}
 .social__form {
   display: flex;
   flex-direction: column;
@@ -211,6 +259,9 @@ h3 {
   .right form div {
     & input {
       width: 200px;
+    }
+    & input:nth-child(2){
+      display: none;
     }
   }
 }

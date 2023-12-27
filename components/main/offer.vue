@@ -27,7 +27,7 @@ const popap = usePopap();
         </div>
       </div>
       <div class="offer__button">
-        <button class="calc" @click="() => (popap.buttonTrigger = !popap.buttonTrigger)">
+        <button class="calcc call__me" @click="() => (popap.buttonTrigger = !popap.buttonTrigger)">
           <span>Расчитать стоимость</span>
           <span>></span>
         </button>
@@ -62,9 +62,22 @@ const popap = usePopap();
   font-size: 16px;
   font-weight: 700;
   padding: 16px 21px;
+  max-width: 300px;
 
   & span:nth-child(1) {
     padding-right: 54px;
+  }
+  &:hover{
+    background: #1536df;
+    color: #fff;
+  }
+}
+.calcc{
+  background: #1536df;
+  color: #fff;
+  &:hover{
+    background: #fff;
+    color: #1536df;
   }
 }
 .offer__item {
@@ -87,7 +100,7 @@ const popap = usePopap();
     color: #000;
     font-size: 16px;
     font-weight: 400;
-    width: 110px;
+    width: 130px;
   }
 }
 .offer {

@@ -6,8 +6,12 @@ defineProps<{ post: Post }>();
 
 <template>
   <div class="stats">
-    <img v-if="post.imagePreview" :src="`/image/upload/${post.imagePreview}`" :alt="post.title" />
-    <img v-else src="/image/asai.png" :alt="post.title" />
+    <NuxtImg
+      v-if="post.imagePreview"
+      :src="`/image/upload/${post.imagePreview}`"
+      :alt="post.title" />
+    <NuxtImg v-else src="/image/asai.png" :alt="post.title" />
+
     <p class="title__stats">
       <NuxtLink :to="`/post/${post.id}`">{{ post.title }} </NuxtLink>
     </p>

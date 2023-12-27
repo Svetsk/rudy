@@ -157,7 +157,8 @@ else{
   /*  width: min(100%, 868px); */
   /*   display: grid;
   grid-template-columns: 1fr; */
-  padding: 50px 80px;
+
+  padding: 80px;
   &-top {
     display: flex;
     align-items: flex-start;
@@ -224,7 +225,7 @@ else{
         /*  padding-right: 10px; */
         width: 645px;
 
-        height: 217px;
+        height: 117px;
         border-radius: 5px;
         border: 1px solid #b1b1b1;
       }

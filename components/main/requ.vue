@@ -9,11 +9,12 @@
             srcdoc="<style>*{padding:0;margin:0;overflow:hidden}
                         html,body{height:100%}
                         img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}
-                        span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
+                        span{text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
+                        .xueviy__hover{transform: translateX(-40px)} 
                         </style>
                         <a href=https://www.youtube.com/shorts/AjZApYwWG88?autoplay=1>
-                        <img src=image/videoOne.png alt='Demo video'>
-                        <span>▶</span>
+                        <img src=image/videoOne.png alt='video'>
+                        <span class='xueviy__hover'><img class='xui' src=image/Strelka.png alt='video' style='width:88px'></span>
                         </a>"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -31,11 +32,12 @@
             srcdoc="<style>*{padding:0;margin:0;overflow:hidden}
                         html,body{height:100%}
                         img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}
-                        span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
-                        </style>
+                        span{text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
+                        .xueviy__hover{transform: translateX(-40px)}  
+                      </style>
                         <a href=https://www.youtube.com/embed/izvIofkLD4w?si=5IhTlsa4nQcktx8-?autoplay=1>
                         <img src=image/videoTwo.png alt='Demo video'>
-                        <span>▶</span>
+                        <span class='xueviy__hover'><img class='xui' src=image/Strelka.png alt='video' style='width:88px'></span>
                         </a>"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -75,7 +77,7 @@ iframe {
   }
   & p:nth-child(2) {
     color: #000;
-    font-family: "Museo Sans Cyrl 300";
+    font-family: "Museo Sans Cyrl 500";
     font-size: 16px;
     font-weight: 300;
     line-height: 109.8%; /* 17.568px */
