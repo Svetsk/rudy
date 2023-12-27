@@ -1,9 +1,7 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-  $END$
+<div>
+  <p>sdf</p>
+</div>
 </template>
 
 <style scoped lang="scss">
