@@ -154,11 +154,7 @@ else{
   overflow-y: scroll;
 }
 .count__price {
-  /*  width: min(100%, 868px); */
-  /*   display: grid;
-  grid-template-columns: 1fr; */
-
-  padding: 80px;
+  padding: 40px 60px;
   &-top {
     display: flex;
     align-items: flex-start;
@@ -175,7 +171,6 @@ else{
       height: 30px;
       display: grid;
       place-content: center;
-
       background: transparent;
       font-size: 48px;
       border: none;
@@ -198,14 +193,11 @@ else{
       }
       & input {
         width: min(100%, 645px);
-
         height: 58px;
-
         border-radius: 5px;
         font-size: 18px;
         padding-left: 10px;
         padding-right: 10px;
-
         border: 1px solid #b1b1b1;
       }
     }
@@ -222,9 +214,7 @@ else{
       & textarea {
         font-size: 18px;
         padding-left: 10px;
-        /*  padding-right: 10px; */
         width: 645px;
-
         height: 117px;
         border-radius: 5px;
         border: 1px solid #b1b1b1;

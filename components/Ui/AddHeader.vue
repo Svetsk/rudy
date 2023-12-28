@@ -12,19 +12,19 @@ const popap = usePopap();
     <nav class="desktop__menu">
       <ul class="desktop__menu__ul">
         <li>
-          <a href="#offer" class="link">Сайты под ключ</a>
+          <a href="/#offer" class="link">Сайты под ключ</a>
         </li>
         <li>
-          <a href="#seo" class="link">Продвижение</a>
+          <a href="/#seo" class="link">Продвижение</a>
         </li>
         <li>
-          <a href="#works" class="link">Портфолио</a>
+          <a href="/#works" class="link">Портфолио</a>
         </li>
         <li>
           <NuxtLink class="link" to="/blog">Блог</NuxtLink>
         </li>
         <li>
-          <a href="#step" class="link">Этапы и оплата</a>
+          <a href="/#step" class="link">Этапы и оплата</a>
         </li>
       </ul>
     </nav>
@@ -38,22 +38,22 @@ const popap = usePopap();
           @click="show = !show"
           key="menu" />
       </Transition>
-      <Transition name="fade">
+      <Transition name="fade" class="mobillle">
         <ul v-if="show" class="mobile__menu__ul">
           <li>
-            <a class="link">Сайты под ключ</a>
+            <a  href="/#offer" class="link">Сайты под ключ</a>
           </li>
           <li>
-            <a class="link">Продвижение</a>
+            <a href="/#seo" class="link">Продвижение</a>
           </li>
           <li>
-            <a class="link">Портфолио</a>
+            <a href="/#works" class="link">Портфолио</a>
           </li>
           <li>
-            <NuxtLink class="link" to="/">Блог</NuxtLink>
+            <NuxtLink class="link" to="/blog">Блог</NuxtLink>
           </li>
           <li>
-            <a class="link">Этапы и оплата</a>
+            <a href="/#step" class="link">Этапы и оплата</a>
           </li>
         </ul>
       </Transition>
@@ -127,6 +127,14 @@ header {
   display: none;
 }
 
+.mobillle{
+  position: relative;
+}
+.mobile__menu__ul{
+  position: absolute;
+  text-align: end;
+  right: 0;
+}
 @media screen and (max-width: 999px) {
   .logo .studio {
     font-size: 20px;
@@ -154,5 +162,11 @@ header {
     display: block;
     order: 4;
   }
+}
+.router-link-active{
+  text-decoration: underline;
+}
+.logo{
+  text-decoration: none;
 }
 </style>

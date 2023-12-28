@@ -1,10 +1,10 @@
 <template>
   <div class="social">
-    <a href=""> Telegram </a>
+    <a href="https://t.me/Zakharssss"> Telegram </a>
     /
-    <a href=""> Viber </a>
+    <a href="viber://add?number=375299468676"> Viber </a>
     /
-    <a href="https://vk.com"> Vk </a>
+    <a href="https://vk.com/zakharrudy"> Vk </a>
   </div>
 </template>
 

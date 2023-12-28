@@ -85,7 +85,9 @@ const sendForm = async () => {
             <input v-model="state.phone" type="text" name="phone" placeholder="Номер телефона" />
             <textarea v-model="state.comment" name="comment" class="textaria"></textarea>
           </div>
-          <button type="submit">Расчитать стоимость</button>
+          <div>
+            <button type="submit">Расчитать стоимость</button>
+          </div>
         </form>
         <div class="social__form zzz">
           <p>Или напишите нам в соц.сети</p>
@@ -121,12 +123,13 @@ const sendForm = async () => {
 <style lang="scss" scoped>
 .forms{
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: space-between !important;
 }
 .textaria{
   height: 200px;
   margin-bottom: 40px;
   background: transparent;
+  color: #fff;
 }
 .social__form {
   display: flex;
@@ -223,6 +226,11 @@ h3 {
 .zzz {
   display: none;
 }
+.right form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 @media screen and (max-width: 1100px) {
   .asdzz {
     display: none;
@@ -263,6 +271,10 @@ h3 {
     & input:nth-child(2){
       display: none;
     }
+  }
+  .forms{
+    align-items: center !important;
+    justify-content: center !important;
   }
 }
 </style>

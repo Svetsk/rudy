@@ -85,8 +85,9 @@ iframe {
 }
 .qqq {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 12px;
+  overflow: hidden;
 
   & iframe {
     border-radius: 25px;
@@ -101,6 +102,9 @@ iframe {
   }
   .video__text {
     padding: 0;
+  }
+  .qqq{
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 660px) {

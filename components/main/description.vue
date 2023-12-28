@@ -27,10 +27,11 @@ const shows = ref(false);
       <button @click="shows = !shows">
         <p>Читать больше</p>
         <UiElementsIcons
-          icon-name="ph:arrow-up-light"
+          icon-name="ph:arrow-down-light"
           class-icon="arrow"
           color-icon="#1536DF"
-          size-width="24px"></UiElementsIcons>
+          size-width="24px" 
+          class="arrowss" ></UiElementsIcons>
       </button>
       <Transition>
         <div class="transition__text" v-if="shows">
@@ -59,6 +60,14 @@ const shows = ref(false);
 </template>
 
 <style lang="scss" scoped>
+.desc{
+  & *{
+    font-family: "Inter";
+  }
+}
+.arrowss{
+  transform: rotate(-45deg);
+}
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease;
@@ -82,7 +91,7 @@ button {
 }
 h3 {
   color: #000;
-  font-family: "Museo Sans Crl 300";
+  font-family: "Museo Sans Crl 500";
   font-size: 24px;
   font-weight: 300;
   line-height: 209.8%; /* 50.352px */
@@ -98,5 +107,11 @@ ul {
 }
 li {
   list-style: disc;
+}
+h2{
+  color: #000;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 209.8%; /* 50.352px */
 }
 </style>

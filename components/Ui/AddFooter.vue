@@ -13,17 +13,18 @@
       <a href="">Instagram</a>
       <a href="">Vk</a>
     </div>
-    <div>
+    <div class="left__text">
       <a href="">+375 (29) 946-8676</a>
       <a href="">УНП: KM0109764</a>
       <a href="">RudyStudio@gmail.com</a>
-      <nuxt-link to="/">Политика конфиденциальности</nuxt-link>
+      <nuxt-link class="pol__conf" to="/">Политика конфиденциальности</nuxt-link>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .footer {
+  margin: 0 20px;
   padding: 120px 0;
   color: black;
   display: flex;
@@ -36,9 +37,19 @@
     row-gap: 20px;
   }
 }
-@media screen and (520px) {
+.left__text{
+  text-align: end;
+}
+.pol__conf{
+  padding-top: 66px;
+}
+@media screen and ( max-width:520px) {
   .footer {
-    display: block;
+    display: flex;
+    flex-direction: column;
+  }
+  .left__text{
+    text-align: start;
   }
 }
 </style>

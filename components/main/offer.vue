@@ -8,8 +8,8 @@ const popap = usePopap();
       <div class="title">
         <h1>Разработка и<br />продвижение сайтов</h1>
         <h2>
-          Создаём сайты под ключ. Рассчитываем бюджет для<br />каждого проекта, чтобы сайт был вам
-          по карману!<br />Поддерживаем свои проекты после сдачи
+          Создаём сайты под ключ. Рассчитываем бюджет для каждого проекта, чтобы сайт был вам
+          по карману! Поддерживаем свои проекты после сдачи
         </h2>
       </div>
       <div class="offer__item">
@@ -47,7 +47,7 @@ const popap = usePopap();
 .offer__button {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 30px;
+  gap: 30px;
   padding-top: 40px;
 }
 .call__me {
@@ -83,7 +83,6 @@ const popap = usePopap();
 .offer__item {
   display: flex;
   column-gap: 38px;
-  flex-wrap: wrap;
   row-gap: 20px;
 }
 .items__offers {
@@ -117,7 +116,7 @@ h1 {
   font-weight: 400;
 }
 h2 {
-  color: #767676;
+  color: #6B6B6B;
   font-size: 24px;
   font-weight: 400;
 }
@@ -182,7 +181,6 @@ h2 {
 }
 @media screen and (max-width: 490px) {
   .calc {
-    padding: 16px 0px;
     font-size: 12px;
     & span:nth-child(1) {
       padding-right: 12px;
@@ -191,6 +189,7 @@ h2 {
   .call__me {
     padding: 16px 0px;
     font-size: 12px;
+    justify-content: space-around;
     & span:nth-child(1) {
       padding-right: 12px;
     }
@@ -210,7 +209,8 @@ h2 {
     font-size: 32px;
   }
   h2 {
-    font-size: 12px;
+    font-size: 16px;
+    max-width: 320px;
   }
   .items__offers {
     & p:nth-child(1) {
@@ -227,6 +227,9 @@ h2 {
   }
   .calc {
     margin-bottom: 10px;
+  }
+  .offer__item{
+    gap: 12px;
   }
   .offer__button button {
     justify-content: space-around;
