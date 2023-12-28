@@ -4,23 +4,24 @@
     <div>
       <div class="qqq">
         <div class="video__flex">
-          <iframe
-            src="https://www.youtube.com/shorts/AjZApYwWG88"
-            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}
-                        html,body{height:100%}
-                        img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}
-                        span{text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
-                        .xueviy__hover{transform: translateX(-40px)} 
-                        </style>
-                        <a href=https://www.youtube.com/shorts/AjZApYwWG88?autoplay=1>
-                        <img src=image/videoOne.png alt='video'>
-                        <span class='xueviy__hover'><img class='xui' src=image/Strelka.png alt='video' style='width:88px'></span>
-                        </a>"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            title="Demo video">
-          </iframe>
+          <a href="https://www.youtube.com/shorts/AjZApYwWG88">
+            <iframe
+              srcdoc="<style>*{padding:0;margin:0;overflow:hidden}
+                          html,body{height:100%}
+                          img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}
+                          span{text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
+                          .xueviy__hover{transform: translateX(-40px)} 
+                          </style>
+                          <a href=https://www.youtube.com/shorts/AjZApYwWG88?autoplay=1>
+                          <img src=image/videoOne.png alt='video'>
+                          <span class='xueviy__hover'><img class='xui' src=image/Strelka.png alt='video' style='width:88px'></span>
+                          </a>"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              title="Demo video">
+            </iframe>
+          </a>
           <div class="video__text">
             <p>LaForme</p>
             <p>Отзыв от Данилы, владелец бренда LaForme</p>
