@@ -28,12 +28,12 @@ const goNext = async (routeName: string, id: string | undefined) => {
 
 <template>
   <div class="postListPreview" v-if="article.id">
-    <img
+    <NuxtImg
       v-if="article.imagePreview"
       :src="`/image/upload/${article.imagePreview}`"
       :alt="article.title" />
 
-    <img v-else src="/image/asai.png" :alt="article.title" />
+      <NuxtImg v-else src="/image/asai.png" :alt="article.title" />
     <div class="description">
       <h4 class="title">{{ article.title }}</h4>
       <p class="created">{{ article.create_at && formatDate(article.create_at) }}</p>
