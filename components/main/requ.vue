@@ -96,9 +96,9 @@ iframe {
   }
 }
 @media screen and (max-width: 760px) {
-  .qqq iframe[data-v-5422c035] {
-    width: 340px;
-    height: 190px;
+  .qqq iframe {
+    width: 340px !important;
+    height: 190px !important;
   }
   .video__text {
     padding: 0;

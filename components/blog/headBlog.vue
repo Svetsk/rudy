@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="margin: 0 20px;">
     <h1>Блог студии Rudy</h1>
     <p>В нашем блоге вы сможете больше узнать о<br />создании сайта. Дизайне и акциях студии</p>
   </div>
@@ -17,10 +17,22 @@ h1 {
 }
 p {
   color: #767676;
-  font-family: "Mulish";
+  font-family: 'Inter';
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+@media screen and (max-width: 600px) {
+  h1{
+    color: #000;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 109.8%; /* 39.528px */
+  }
+  p{
+    font-size: 24px;
+    font-weight: 400;
+  }
 }
 </style>

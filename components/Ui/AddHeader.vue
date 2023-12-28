@@ -133,7 +133,8 @@ header {
 .mobile__menu__ul{
   position: absolute;
   text-align: end;
-  right: 0;
+  top: 35px;
+  right: 20px;
 }
 @media screen and (max-width: 999px) {
   .logo .studio {

@@ -27,6 +27,7 @@ defineProps<{ post: Post }>();
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+  margin: 0 20px;
   & img {
     height: min(100%, 319px);
   }
