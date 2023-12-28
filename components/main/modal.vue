@@ -50,26 +50,34 @@ const sendForm = async () => {
         <div class="social__form asdzz">
           <p>Или напишите нам в соц.сети</p>
           <div class="icons__form">
-            <UiElementsIcons
-              icon-name="basil:telegram-solid"
-              color-icon="white"
-              size-width="28px"
-              size-heigth="28px" />
-            <UiElementsIcons
-              icon-name="basil:viber-solid"
-              color-icon="white"
-              size-width="28px"
-              size-heigth="28px" />
-            <UiElementsIcons
-              icon-name="fa6-brands:square-instagram"
-              color-icon="white"
-              size-width="28px"
-              size-heigth="28px" />
-            <UiElementsIcons
-              icon-name="basil:vk-solid"
-              color-icon="white"
-              size-width="28px"
-              size-heigth="28px" />
+            <a href="https://t.me/Zakharssss">
+              <UiElementsIcons
+                icon-name="basil:telegram-solid"
+                color-icon="white"
+                size-width="28px"
+                size-heigth="28px" />
+            </a>
+            <a href="viber://add?number=375299468676">
+              <UiElementsIcons
+                icon-name="basil:viber-solid"
+                color-icon="white"
+                size-width="28px"
+                size-heigth="28px" />
+            </a>
+              <a href="">
+                <UiElementsIcons
+                  icon-name="fa6-brands:square-instagram"
+                  color-icon="white"
+                  size-width="28px"
+                  size-heigth="28px" />
+              </a>
+              <a href="https://vk.com/zakharrudy">
+                <UiElementsIcons
+                  icon-name="basil:vk-solid"
+                  color-icon="white"
+                  size-width="28px"
+                  size-heigth="28px" />
+              </a>
           </div>
         </div>
       </div>

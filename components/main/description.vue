@@ -24,42 +24,56 @@ const shows = ref(false);
       </ul>
     </div>
     <div>
-      <button @click="shows = !shows">
-        <p>Читать больше</p>
-        <UiElementsIcons
-          icon-name="ph:arrow-down-light"
-          class-icon="arrow"
-          color-icon="#1536DF"
-          size-width="24px" 
-          class="arrowss" ></UiElementsIcons>
-      </button>
-      <Transition>
-        <div class="transition__text" v-if="shows">
-          <h2>Преимущества продвижения в студии RudyStudio:</h2>
-          <ul>
-            <p>Гарантированные результаты в договоре</p>
-            <li>Быстрый запуск.</li>
-            <li>Стоимость продвижения от 105$/месяц.</li>
-            <p>
-              Мы идем в ногу с развитием цифровых технологий, используя эффективные методики
-              продвижения сайтов в Минске, Беларуси, России и странах СНГ.
-            </p>
-          </ul>
-          <h2>Продвижение подходит тем, кто хочет:</h2>
-          <ul>
-            <li>Повысить посещаемость в поисковых системах.</li>
-            <li>Получить целевых клиентов.</li>
-            <li>Улучшить репутацию в поисковом пространстве.</li>
-            <li>Развиваться в других регионах и странах.</li>
-            <li>Увеличить количество заявок и продаж.</li>
-          </ul>
+        <div v-if="!shows" @click="shows = !shows" class="buttn" >
+          <p>Читать больше</p>
+          <UiElementsIcons
+            icon-name="ph:arrow-down-light"
+            class-icon="arrow"
+            color-icon="#1536DF"
+            size-width="24px" 
+            class="arrowss"></UiElementsIcons>
         </div>
-      </Transition>
+      <div v-else>
+          <div class="transition__text" v-if="shows">
+            <h2>Преимущества продвижения в студии RudyStudio:</h2>
+            <ul>
+              <p>Гарантированные результаты в договоре</p>
+              <li>Быстрый запуск.</li>
+              <li>Стоимость продвижения от 105$/месяц.</li>
+              <p>
+                Мы идем в ногу с развитием цифровых технологий, используя эффективные методики
+                продвижения сайтов в Минске, Беларуси, России и странах СНГ.
+              </p>
+            </ul>
+            <h2>Продвижение подходит тем, кто хочет:</h2>
+            <ul>
+              <li>Повысить посещаемость в поисковых системах.</li>
+              <li>Получить целевых клиентов.</li>
+              <li>Улучшить репутацию в поисковом пространстве.</li>
+              <li>Развиваться в других регионах и странах.</li>
+              <li>Увеличить количество заявок и продаж.</li>
+            </ul>
+          </div>
+        <div @click="shows = !shows" class="buttn">
+          <p>Свернуть</p>
+          <UiElementsIcons
+            icon-name="ph:arrow-down-light"
+            class-icon="arrow"
+            color-icon="#1536DF"
+            size-width="24px" 
+            class="arrowsss"></UiElementsIcons>
+        </div>
+       </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.buttn{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
 .desc{
   & *{
     font-family: "Inter";
@@ -67,6 +81,9 @@ const shows = ref(false);
 }
 .arrowss{
   transform: rotate(-45deg);
+}
+.arrowsss{
+  transform: rotate(-135deg);
 }
 .v-enter-active,
 .v-leave-active {

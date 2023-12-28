@@ -8,10 +8,10 @@
       <a href="">Этапы и оплата</a>
     </div>
     <div>
-      <a href="">Telegram</a>
-      <a href="">Viber</a>
+      <a href="https://t.me/Zakharssss">Telegram</a>
+      <a href="viber://add?number=375299468676">Viber</a>
       <a href="">Instagram</a>
-      <a href="">Vk</a>
+      <a href="https://vk.com/zakharrudy">Vk</a>
     </div>
     <div class="left__text">
       <a href="">+375 (29) 946-8676</a>

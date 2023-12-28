@@ -39,7 +39,7 @@ const sendForm = async () => {
     // popap.value.buttonTrigger = false   закрываем
     // popap.value.timerTrigger = true   открываем после успешной отправке
     popap.value.buttonTrigger = !popap.value.buttonTrigger;
-    popap.value.timerTrigger = !popap.value.buttonTrigger;
+    return await navigateTo('sucsses')
   } catch (error) {
     console.log(error);
     // popap.value.buttonTrigger = false   закрываем
