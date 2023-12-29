@@ -12,6 +12,7 @@ defineProps({
   cost: String,
   classCard: String,
 });
+const popap = usePopap();
 </script>
 
 <template>
@@ -38,7 +39,7 @@ defineProps({
           от <span>{{ cost }}</span>
         </p>
       </div>
-      <UiElementsButton title="Расчитать стоимость" link="#count" :is-button="false" />
+      <UiElementsButton title="Расчитать стоимость" @click="() => (popap.buttonTrigger = !popap.buttonTrigger)" :is-button="false" />
     </div>
   </div>
 </template>

@@ -5,8 +5,11 @@
       <div class="work__row__one">
         <div class="fewho">
           <a href="https://%D0%A4%D0%B5%D1%85%D1%83.%D0%B1%D0%B5%D0%BB">
-            <div class="fewho__img">
+            <div class="posit">
+              <NuxtImg class="absol" src="/image/Strelka.png" height="64px" />
+              <div class="fewho__img">
               <NuxtImg src="/image/fewho.png" />
+            </div>
             </div>
           </a>
           <p class="port__title">ООО “ФЕЙХУ”</p>
@@ -14,8 +17,11 @@
         </div>
         <div class="facture">
           <a href="https://factureproject.ru">
-            <div class="facture__img">
-              <NuxtImg src="/image/facture.png" />
+            <div class="posit">
+              <NuxtImg class="absol" src="/image/Strelka.png" height="64px" />
+              <div class="facture__img">
+                <NuxtImg src="/image/facture.png" />
+              </div>
             </div>
           </a>
           <p class="port__title">Facture Project</p>
@@ -24,18 +30,24 @@
       </div>
       <div class="work__row__two">
         <div class="asai">
-          <a href="https://Asaivapeshop.by">
-            <div class="asai__img">
-              <NuxtImg src="/image/asai.png" />
+          <a href="https://asaivapeshop.by">
+            <div class="posit">
+              <NuxtImg class="absol" src="/image/Strelka.png" height="64px" />
+              <div class="asai__img">
+                <NuxtImg src="/image/asai.png" />
+              </div>
             </div>
           </a>
           <p class="port__title">AsaiVapeShop</p>
           <p class="port__desk">Сайт интернет-магазина вейпшопа в РБ</p>
         </div>
         <div class="soen">
-          <a href="https://Soen.su">
-            <div class="soen__img">
-              <NuxtImg src="/image/soen.png" />
+          <a href="https://soenshop.ru">
+            <div class="posit">
+              <NuxtImg class="absol" src="/image/Strelka.png" height="64px" />
+              <div class="soen__img">
+                <NuxtImg src="/image/soen.png" />
+              </div>
             </div>
           </a>
           <p class="port__title">SOEN</p>
@@ -43,8 +55,11 @@
         </div>
         <div class="lafo">
           <a href="https://Laforme.su">
-            <div class="lafo__img">
-              <NuxtImg src="/image/lafo.png" />
+            <div class="posit">
+              <NuxtImg class="absol" src="/image/Strelka.png" height="64px" />
+              <div class="lafo__img">
+                <NuxtImg src="/image/lafo.png" />
+              </div>
             </div>
           </a>
           <p class="port__title">Laforme</p>
@@ -56,6 +71,21 @@
 </template>
 
 <style lang="scss" scoped>
+.posit{
+  position: relative;
+  & .absol{
+    position: absolute;
+    z-index: 2;
+    left: 40%;
+    transform: translateX(-50%);
+    bottom: 50%;
+    transform: translateY(50%);
+    visibility: hidden;
+  }
+  &:hover .absol{
+    visibility: visible;
+  }
+}
 .work__flex {
   display: flex;
   flex-direction: column;
@@ -68,7 +98,7 @@
 }
 .port__desk {
   color: #000;
-  font-family: "Museo Sans Cyrl 400";
+  font-family: "Museo Sans Cyrl 500";
   font-size: 16px;
   font-style: normal;
   font-weight: 300;

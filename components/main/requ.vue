@@ -5,12 +5,15 @@
       <div class="qqq">
         <div class="video__flex">
           <a href="https://www.youtube.com/shorts/AjZApYwWG88">
+            <div class="posit">
+              <NuxtImg class="absol" src="/image/Strelka.png" height="64px" />
             <iframe
+            class="qqq"
               srcdoc="<style>*{padding:0;margin:0;overflow:hidden}
                           html,body{height:100%}
                           img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}
                           span{text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
-                          .xueviy__hover{transform: translateX(-40px)} 
+                          .xueviy__hover{transform: translateX(-40px); display:none;}
                           </style>
                           <a href=https://www.youtube.com/shorts/AjZApYwWG88?autoplay=1>
                           <img src=image/videoOne.png alt='video'>
@@ -21,6 +24,7 @@
               allowfullscreen
               title="Demo video">
             </iframe>
+            </div>
           </a>
           <div class="video__text">
             <p>LaForme</p>
@@ -28,23 +32,26 @@
           </div>
         </div>
         <div class="video__flex">
-          <iframe
-            src="https://www.youtube.com/embed/izvIofkLD4w?si=5IhTlsa4nQcktx8-"
-            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}
-                        html,body{height:100%}
-                        img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}
-                        span{text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
-                        .xueviy__hover{transform: translateX(-40px)}  
-                      </style>
-                        <a href=https://www.youtube.com/embed/izvIofkLD4w?si=5IhTlsa4nQcktx8-?autoplay=1>
-                        <img src=image/videoTwo.png alt='Demo video'>
-                        <span class='xueviy__hover'><img class='xui' src=image/Strelka.png alt='video' style='width:88px'></span>
-                        </a>"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            title="Demo video">
-          </iframe>
+          <div class="posit">
+            <NuxtImg class="absol" src="/image/Strelka.png" height="64px" />
+            <iframe
+              src="https://www.youtube.com/embed/izvIofkLD4w?si=5IhTlsa4nQcktx8-"
+              srcdoc="<style>*{padding:0;margin:0;overflow:hidden}
+                          html,body{height:100%}
+                          img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}
+                          span{text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
+                          .xueviy__hover{transform: translateX(-40px); display: none;}  
+                        </style>
+                          <a href=https://www.youtube.com/embed/izvIofkLD4w?si=5IhTlsa4nQcktx8-?autoplay=1>
+                          <img src=image/videoTwo.png alt='Demo video'>
+                          <span class='xueviy__hover'><img class='xui' src=image/Strelka.png alt='video' style='width:88px'></span>
+                          </a>"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              title="Demo video">
+            </iframe>
+          </div>
           <div class="video__text">
             <p>AsaiVapeShop</p>
             <p>Отзыв от Владислава, владелец Asaivapeshop</p>
@@ -56,6 +63,21 @@
 </template>
 
 <style lang="scss" scoped>
+.posit{
+  position: relative;
+  & .absol{
+    position: absolute;
+    z-index: 2;
+    left: 45%;
+    transform: translateX(-50%);
+    bottom: 50%;
+    transform: translateY(50%);
+    visibility: hidden;
+  }
+  &:hover .absol{
+    visibility: visible;
+  }
+}
 iframe {
   width: 560px;
   height: 315px;
@@ -75,6 +97,7 @@ iframe {
     font-size: 24px;
     font-weight: 400;
     line-height: 109.8%; /* 26.352px */
+    padding-top: 20px;
   }
   & p:nth-child(2) {
     color: #000;
@@ -111,6 +134,9 @@ iframe {
 @media screen and (max-width: 660px) {
   .qqq {
     flex-direction: column;
+  }
+  .video__text p:nth-child(1){
+    padding-top: 4px;
   }
 }
 </style>

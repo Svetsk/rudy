@@ -6,7 +6,7 @@ defineProps<{ post: Post }>();
 
 <template>
   <div class="stats">
-    <NuxtImg
+    <NuxtImg class="nuxt__"
       v-if="post.imagePreview"
       :src="`/image/upload/${post.imagePreview}`"
       :alt="post.title" />
@@ -37,9 +37,12 @@ defineProps<{ post: Post }>();
 }
 .title__stats {
   color: #000;
-  font-family: "Museo Sans Cyrl";
+  font-family: "Museo Sans Cyrl 500";
   font-size: 24px;
   font-weight: 400;
   line-height: 109.8%; /* 26.352px */
+}
+p{
+  font-family: "Museo Sans Cyrl 500";
 }
 </style>

@@ -10,7 +10,7 @@
     <div>
       <a href="https://t.me/Zakharssss">Telegram</a>
       <a href="viber://add?number=375299468676">Viber</a>
-      <a href="">Instagram</a>
+      <a href="https://www.instagram.com/zakhar_rudy_/">Instagram</a>
       <a href="https://vk.com/zakharrudy">Vk</a>
     </div>
     <div class="left__text">

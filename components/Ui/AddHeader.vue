@@ -64,7 +64,7 @@ const popap = usePopap();
         icon-name="ph:arrow-up-light"
         class-icon="arrow"
         color-icon="#1536DF"
-        size-width="24px"></UiElementsIcons>
+        size-width="18px"></UiElementsIcons>
     </a>
   </header>
 </template>

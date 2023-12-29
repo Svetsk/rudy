@@ -23,7 +23,7 @@ const popap = usePopap();
         </div>
         <div class="items__offers">
           <p>От 150$</p>
-          <p>Подберём бюджет под малые проекты</p>
+          <p class="qwedsa">Подберём бюджет под малые проекты</p>
         </div>
       </div>
       <div class="offer__button">
@@ -31,7 +31,7 @@ const popap = usePopap();
           <span>Расчитать стоимость</span>
           <span>></span>
         </button>
-        <NuxtLink class="call__me" to="#footer">
+        <NuxtLink class="call__me" to="#modal">
           <span>Связаться с нами</span>
           <span>></span>
         </NuxtLink>
@@ -127,6 +127,9 @@ h2 {
     width: inherit;
     height: inherit;
   }
+}
+.qwedsa{
+  width: 160px !important;
 }
 @media screen and (max-width: 1300px) {
   .offer__image {

@@ -25,7 +25,7 @@ const shows = ref(false);
     </div>
     <div>
         <div v-if="!shows" @click="shows = !shows" class="buttn" >
-          <p>Читать больше</p>
+          <p class="btntn">Читать больше</p>
           <UiElementsIcons
             icon-name="ph:arrow-down-light"
             class-icon="arrow"
@@ -55,12 +55,12 @@ const shows = ref(false);
             </ul>
           </div>
         <div @click="shows = !shows" class="buttn">
-          <p>Свернуть</p>
+          <p class="btntn">Свернуть</p>
           <UiElementsIcons
             icon-name="ph:arrow-down-light"
             class-icon="arrow"
             color-icon="#1536DF"
-            size-width="24px" 
+            size-width="18px" 
             class="arrowsss"></UiElementsIcons>
         </div>
        </div>
@@ -69,6 +69,9 @@ const shows = ref(false);
 </template>
 
 <style lang="scss" scoped>
+.btntn{
+  color: #1536DF;
+}
 .buttn{
   display: flex;
   align-items: center;
@@ -124,6 +127,7 @@ ul {
 }
 li {
   list-style: disc;
+  line-height: 209.8%; /* 33.568px */
 }
 h2{
   color: #000;
